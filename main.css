@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+    width: 100vm;
+}
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:7em; 
+    border-bottom: 0.8em solid white;
+}
+.logo-div{
+    height: 5em;
+    width: auto; 
+    padding-left: 3.2em;
+    padding-top: 0.9em;
+}
+#logo-image{
+    height: 2.1em;
+    width: 3.2em;
+}
+.search-bar{
+    border: none;
+    margin-top: -1em;
+    width:30%;
+    display: inline-flex;
+    align-items: center;
+}
+.search-icon{
+    font-size: .85em;
+    border: none;
+    width:3em;
+    height:3em;
+    outline: none;
+    border-radius: 0.3em 0 0 0.3em;
+    background-color: #eceff1;
+}
+#search-input{
+    margin-left: 0.3em;
+    padding-left: 10px;
+    margin: 0;
+    border: none;
+    background-color: #eceff1;
+    border-radius: 0 0.3em 0.3em 0 ;
+    width: 100%;
+    height: 3em;
+    outline: none;
+}
+#search-input:focus{
+  background-color: #fefeff;
+  border: 0.3px solid #dbdee0;
+  margin: 0;
+}
+::placeholder{
+    text-indent: 0em;
+}
+.icon-group{
+  height: 3em;
+  text-align: center;
+  margin-right: 10px;
+  padding-top:0.7em;
+  margin-top: -1em;
+
+}
+.nav-icon{
+  height: 1.3em;
+  width: 1.3em;
+  margin-right: 1em;
+}
+
+/* --------------------nav area ends-------------- */
+/* --------------------Category Area Starts ----------- */
+.wrapper{
+    display: grid;
+    grid-template-rows:repeat(auto-fill,0.6fr);
+    grid-gap: 0.2em;
+    grid-template-areas: "categories" "heading" "wrapper-grid";
+    align-items: center;
+    padding-left: 0em;
+}
+.categories{
+    height: auto;
+    grid-area: categories;
+    align-items: center;
+    margin-right: 1em;
+    display: grid;
+    min-width: 1em;
+    grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+    align-items: center;
+    justify-items: center;
+  }
+.btn{
+    border: none;
+    border: 0.18px solid #c9b8d1 ;
+    outline: none;
+    border-radius: 32px;
+    margin: 0.8em 0.5em;
+    height: 3em;
+    width:auto;
+    padding: 0.3em 2em;
+    font-size:0.8em;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 5px 0 #ccc2d1;
+}
+.btn:hover{
+    background-color: rgb(151, 133, 133);
+    color: white;
+    background-color: #f83ff8;
+    box-shadow:none;
+}
+.item-heading{
+    height: 3em;
+    grid-area: heading;
+}
+.item-heading h4{
+    letter-spacing: 0.22em;
+    padding-left:4em ;
+    padding-top: 1em;
+}
+/* ----------------------Category Ends--------------- */
+/* ----------------------Item Box--------------------- */
+.wrapper-grid {
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    grid-gap: 0.5em;
+    grid-area: wrapper-grid;
+    margin: 0em;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 2em;
+  }
+  
+  .container {
+    background-color:rgb(245, 233, 233);
+    width:max-content;
+    border-radius:0.3em;
+    padding: 0 0.999em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 5px 0 #c9b8d1;
+    margin-left: 2.5em;
+  }  
+  .img-area{
+      width:114%;
+      height: 280px;
+  }
+  .desc-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-items: left;
+  }
+  .desc-section h4 {
+    margin-top: 0.7px;
+  }
+  .desc-section h5{
+    color: #535766;
+    font-family: Whitney;
+    letter-spacing: 0.1em;
+    word-spacing: 0.3em;
+    font-weight: 400;
+  }
+  .desc-section p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    text-align:left;
+  }
+  .addtocart:hover, .addtocart:focus {
+    color: #fff;
+    outline: 0;
+  }
+  .addtocart{
+    box-sizing: border-box;            
+    border: 0.2px solid #e74c3c;
+    background-color: transparent;
+    width: 8em;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 0.7em;
+    margin: 0;
+    margin-left: 2em;
+    padding: 0.8em .2em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-bottom: 2em;
+  }
+  .first {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .first:hover {
+    box-shadow: 0 0 40px 40px #e74c3c inset;
+  }
